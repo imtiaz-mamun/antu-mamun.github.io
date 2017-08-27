@@ -58,7 +58,7 @@
 	text-transform: uppercase;
 	color: #FFFFFF;
 	top: 240px;
-	font-size: 4.5em;
+	font-size: 3.5em !important;
 	font-weight: 600;
 	white-space: nowrap;
 	margin-left: 11%;
