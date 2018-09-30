@@ -1,0 +1,221 @@
+.typewriter h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #FFFFFF; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /*margin: 0 auto;  Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  100% { border-color: #FFFFFF; }
+}
+.class4Pad{
+  padding-right: 200px;
+  padding-left : -200px;
+  /*font-size: 111%;*/
+}
+/*html {
+  height: 100%;
+}
+*/
+
+body {
+  display: flex;
+}
+
+
+div.containerAbout {
+  /*position: absolute;
+  display: flex;
+  flex: auto;
+  flex-direction: column;*/
+  max-height: 90%;
+  width: 100%;
+  margin-left: 100px;
+}
+.containerS{
+  width: 105.8%;
+  background: #00AEE4;
+  vertical-align: middle;
+  margin-left: -100px;
+}
+/*div.header {
+  height: auto;
+  text-align: center;
+  color: ghostwhite;
+  padding: 2.3rem 1rem 2.3rem 1rem;
+  position: relative;
+}*/
+
+div.item {
+  display: flex;
+  flex: auto;
+  overflow-y: auto;
+  left: 100px;
+  width:10px;
+  /*padding: 0rem 1rem 0rem 1rem;*/
+}
+
+#timeline {
+  position: absolute;
+  display: table;
+  height: 100%;
+}
+#timeline div:after {
+  content: '';
+  /*try 2px width*/
+  width: 20px;
+  position: absolute;
+  top: .5rem;
+  bottom: 0rem;
+  left: 60px;
+  z-index: 1;
+  background: #00AEE4;
+  margin-top: 90px;
+}
+#timeline h3 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem;
+  color: #000;
+  margin: 0;
+  /*font-size: 1em;*/
+  font-weight: bold;
+}
+@media (min-width: 62em) {
+  #timeline h3 {
+    font-size: 1.05em;
+    left: 100px;
+  }
+}
+#timeline section.year {
+  position: relative;
+}
+#timeline section.year:first-child section {
+  margin-top: -1.3em;
+  padding-bottom: 0px;
+}
+#timeline section.year section {
+  position: relative;
+  padding-bottom: 1.25em;
+  margin-bottom: 2.2em;
+  margin-top: -1.3em;
+}
+#timeline section.year section h4 {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0 0 0 89px;
+  color: #00AEE4;
+}
+@media (min-width: 62em) {
+  #timeline section.year section h4 {
+    font-size: 1.2em;
+  }
+}
+#timeline section.year section ul {
+  list-style-type: none;
+  padding: 0 0 0 75px;
+  margin: -1.35rem 0 1em;
+  max-width: 100%;
+  font-size: 1em;
+  padding-top: 10px;
+}
+@media (min-width: 62em) {
+  #timeline section.year section ul {
+    font-size: 1.1em;
+    padding: 0 0 0 81px;
+  }
+}
+#timeline section.year section ul:last-child {
+  margin-bottom: 0;
+}
+#timeline section.year section ul:first-of-type:after {
+  content: '';
+  width: 20px;
+  height: 15px;
+  background: #959595;
+  border: 2px solid #FFFFFF;
+  /*-webkit-border-radius: 50%;*/
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  /*border-radius: 50%;*/
+  position: absolute;
+  left: 60px;
+  top: 2px;
+  z-index: 2;
+}
+#timeline section.year section ul li {
+  margin-left: .5rem;
+}
+#timeline section.year section ul li:before {
+  content: '·';
+  margin-left: -.25rem;
+  padding-right: .3rem;
+}
+#timeline section.year section ul li:not(:first-child) {
+  margin-top: .4rem;
+}
+#timeline section.year section ul li span.price {
+  color: mediumturquoise;
+  font-weight: 500;
+}
+
+#btcwidget {
+  display: inline;
+}
+#btcwidget img {
+  display: none;
+}
+/*//////////////////////////////////////////*/
+.center {
+    margin: auto;
+    width: 100%;
+    height: 50%;
+    padding: 5px;
+}
+.playBTN{
+width: 100px;
+}
+.pauseBTN{
+width: 100px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-top:2px;
+    font-weight: bold;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1 {
+    background-color: white; 
+    color: black; 
+    margin: 2px;
+    border: 3px solid #008CBA;
+}
+
+.button1:hover {
+    background-color: #00AEE4;
+    color: white;
+}
