@@ -4,6 +4,15 @@ body{
     padding-top:54px;
     color:#868e96
 }
+canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+mark {
+      background-color: #002e4d;
+      color: rgba(255,255,255,.5);
+}
 @media (min-width:992px){
     body{
         padding-top:0;
