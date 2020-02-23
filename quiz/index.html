@@ -1,0 +1,658 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/firework.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+	  	var myLoadVar;
+		function myLoaderFunction() {
+		  myLoadVar = setTimeout(showHomePage, 2000);
+		}
+		function showHomePage() {
+		  document.getElementById("loader").style.display = "none";
+		  document.getElementById("myHomeDiv").style.display = "block";
+		}
+	</script>
+</head>
+<body onload="myLoaderFunction()">
+<div id="loader"></div>
+<div style="display:none;" id="myHomeDiv">
+<div id="firework_success" class="pyro">
+    <div class="before"></div>
+    <div class="after"></div>
+</div>
+<div id="alert_plane" class="customAlert">
+	<img class="alert_plane_img" src="images/alert_msgN.png">
+	<button id="alert_plane_ok" class="customAlert_btn" onclick="rmvMsg()"><img src="images/go-away.png" width="20px"> Go Ahead!</button>
+</div>
+<div id="success_plane" class="customAlert">
+	<img class="alert_plane_img" src="images/alert_msg_success.png">
+	<button id="alert_plane_suc" class="customAlert_btn" onclick="rmvSuc()">Complete! <img src="images/go-away-done.png" width="20px"></button>
+</div>
+<div class="bg">
+<div class="frame">
+<div class="plane-container">
+<a href="http://customer.io/" target="_blank">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+width="1131.53px" height="379.304px" viewBox="0 0 1131.53 379.304" enable-background="new 0 0 1131.53 379.304"
+xml:space="preserve" class="plane">
+<polygon fill="#D8D8D8" points="72.008,0 274.113,140.173 274.113,301.804 390.796,221.102 601.682,367.302 1131.53,0.223  "/>
+<polygon fill="#C4C4C3" points="1131.53,0.223 274.113,140.173 274.113,301.804 390.796,221.102   "/>
+</svg></a>
+
+</div>
+</div>
+</div>
+<div id="quizForm">
+	<div class="mediaCSS">
+		<div class="bannerBG" align="center">
+		</div>
+		<div class="row">
+			<div class="f1">
+				<img class="f1Pic fadeIn" src="images/01.png">
+			</div>
+		</div>
+		<div class="f1">
+			<img class="f2Pic" src="images/03.png">
+			<img class="f2Pic_mob" src="images/03-MOB.png">
+		</div>
+		<div class="row">
+			<div class="f1">
+				<img class="f3Pic" src="images/04N.png">
+			</div>
+		</div>
+		<div class="f1">
+			<!-- <img id="air-plane-4-shake" class="f4Pic f4PicZoom" onmouseover="addShake()" onmouseout="rmvShake()" src="images/05.png"> -->
+			<img id="air-plane-4-shake" class="f4Pic f4PicZoom" src="images/05.png">
+		</div>
+	</div>
+	<div class="row questions">
+		<div class="col-md-12 QBank fadeIn" style="background: rgba(0, 0, 0, 0.7);">
+			<form id="quiz-info-form" align="left" class="validate">
+				<h1 class="hdText" align="center">Quiz Questions for Ferintus</h1>
+				      <h3 id="id_q1" class="lbl required" tabindex="0"><span>1.</span> Which is the first high-dose, non-dextran intravenous iron approved by US FDA?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio1" id="radio11" class="radio"/>
+							<label for="radio11">Iron sucrose</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio1" id="radio12" class="radio"/>
+							<label for="radio12">Iron dextran</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio1" id="radio13" class="radio"/>
+							<label for="radio13">Ferric carboxymaltose</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio1" id="radio14" class="radio"/>
+							<label for="radio14">Ferric gluconate</label>
+						</div>
+				      <h3 id="id_q2" class="lbl required" tabindex="0"><span>2.</span> What is the maximum dose of Ferintus that can be given in single administration?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio2" id="radio21" class="radio"/>
+							<label for="radio21">1000mg</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio2" id="radio22" class="radio"/>
+							<label for="radio22">500mg</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio2" id="radio23" class="radio"/>
+							<label for="radio23">750mg</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio2" id="radio24" class="radio"/>
+							<label for="radio24">850mg</label>
+						</div>
+				      <h3 id="id_q3" class="lbl required" tabindex="0"><span>3.</span> What is the strength of Ferintus?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio3" id="radio31" class="radio"/>
+							<label for="radio31">50mg/ml</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio3" id="radio32" class="radio"/>
+							<label for="radio32">500mg/10ml</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio3" id="radio33" class="radio"/>
+							<label for="radio33">None of the above</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio3" id="radio34" class="radio"/>
+							<label for="radio34">Both A and B</label>
+						</div>
+				      <h3 id="id_q4" class="lbl required" tabindex="0"><span>4.</span> What is the maximum required time of Ferintus for administration of a total dose?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio4" id="radio41" class="radio"/>
+							<label for="radio41">11 mins</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio4" id="radio42" class="radio"/>
+							<label for="radio42">14.5 mins</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio4" id="radio43" class="radio"/>
+							<label for="radio43">7.5 mins</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio4" id="radio44" class="radio"/>
+							<label for="radio44">Both A and B</label>
+						</div>
+				      <h3 id="id_q5" class="lbl required" tabindex="0"><span>5.</span> What are the chronic diseases that causes anemia?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio5" id="radio51" class="radio"/>
+							<label for="radio51">Chronic Heart failure</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio5" id="radio52" class="radio"/>
+							<label for="radio52">Chronic kidney disease</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio5" id="radio53" class="radio"/>
+							<label for="radio53">Inflammatory Bowel disease</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio5" id="radio54" class="radio"/>
+							<label for="radio54">All of the above</label>
+						</div>
+				      <h3 id="id_q6" class="lbl required" tabindex="0"><span>6.</span> A 40 years old woman weighing 64kg having a hb level of 8 g/dl. What will be the dose of Ferintus for her?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio6" id="radio61" class="radio"/>
+							<label for="radio61">500mg</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio6" id="radio62" class="radio"/>
+							<label for="radio62">1000mg</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio6" id="radio63" class="radio"/>
+							<label for="radio63">1500mg</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio6" id="radio64" class="radio"/>
+							<label for="radio64">2000mg</label>
+						</div>
+				      <h3 id="id_q7" class="lbl required" tabindex="0"><span>7.</span> What are the indications of intravenous iron therapy?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio7" id="radio71" class="radio"/>
+							<label for="radio71">Inadequate response to an adequate trial of oral iron</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio7" id="radio72" class="radio"/>
+							<label for="radio72">Inability to absorb oral iron resulting in severe iron deficiency</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio7" id="radio73" class="radio"/>
+							<label for="radio73">Severe intolerance to oral iron</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio7" id="radio74" class="radio"/>
+							<label for="radio74">All of the above</label>
+						</div class="options">
+				      <h3 id="id_q8" class="lbl required" tabindex="0"><span>8.</span> Who are the risk group of developing Iron deficiency anemia?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio8" id="radio81" class="radio"/>
+							<label for="radio81">Premature or low birth weight babies</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio8" id="radio82" class="radio"/>
+							<label for="radio82">Menstruating women</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio8" id="radio83" class="radio"/>
+							<label for="radio83">Pregnant and breastfeeding women</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio8" id="radio84" class="radio"/>
+							<label for="radio84">All of the above</label>
+						</div>
+				      <h3 id="id_q9" class="lbl required" tabindex="0"><span>9.</span> What are the Guidelines that recommended the use of Ferric Carboxymaltose for dialysis patient?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio9" id="radio91" class="radio"/>
+							<label for="radio91">KIDGO</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio9" id="radio92" class="radio"/>
+							<label for="radio92">NICE</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio9" id="radio93" class="radio"/>
+							<label for="radio93">None of the above</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio9" id="radio94" class="radio"/>
+							<label for="radio94">Both A and B</label>
+						</div>
+				      <h3 id="id_q10" class="lbl required" tabindex="0"><span>10.</span> What are the common adverse reaction of Ferric Carboxymaltose?</h3>
+				      	<div class="options">
+							<input type="radio" name="radio10" id="radio101" class="radio"/>
+							<label for="radio101">Nausea</label>
+						</div>
+
+						<div class="options">
+							<input type="radio" name="radio10" id="radio102" class="radio"/>
+							<label for="radio102">Injection site reaction</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio10" id="radio103" class="radio"/>
+							<label for="radio103">Headache</label>
+						</div>
+
+						<div class="options">	
+							<input type="radio" name="radio10" id="radio104" class="radio"/>
+							<label for="radio104">All of the above</label>
+						</div>
+				<br>
+				<h1 class="hdText marTop50" align="center">Personal Information Form</h1>
+				<div class="text-input">
+					<div class="marBot">
+						<p class="invalid_text">Demo</p>
+					  <input type="text" id="input_fn" placeholder="Type your FULL-NAME here!" required>
+					  <label for="input_fn">Full Name</label>
+					</div>
+					<div class="marBot">
+						<p class="invalid_text">Demo</p>
+					  <input type="text" id="input_d" placeholder="Type your DESIGNATION here!" required>
+					  <label for="input_d">Designation</label>
+					</div>
+					<div class="marBot">
+						<p id="inv-email" class="invalid_text">Invalid Email Address!</p>
+					  <input type="email" id="email-input" name="email-input" placeholder="Type your EMAIL here! (Ex: name@example.com)" title="Please Enter a Valid Email Address" required onchange="ValidateEmail()">
+					  <label for="email-input">Email</label>
+					</div>
+					<div class="marBot">
+						<p id="inv-phone" class="invalid_text">Invalid Phone Number!</p>
+					  <input type="text" id="input_p" placeholder="Type your PHONE here! (Ex: 01700000000)" title="Please Enter a Valid Mobile Number" required onchange="ValidatePhone()">
+					  <label for="input_p">Phone</label>
+					</div>
+					<div class="marBot">
+						<p class="invalid_text">Demo</p>
+					  <input type="text" id="input_a" placeholder="Type your ADDRESS here!" required>
+					  <label for="input_a">Address</label>
+					</div>
+					<div class="marBot">
+						<p class="invalid_text">Demo</p>
+					  <input type="text" id="input_bmdc" placeholder="Type your BMDC-REGISTRATION-NUMBER here!">
+					  <label for="input_bmdc">BMDC Reg. No.</label>
+					</div>
+				</div>
+
+				<div class="rab" id="sentButton" align="center" onclick="chkB4Submit()">
+				  <span id="sentIcon"><i class="fas fa-plane"></i></span>
+				  <span id="sentText">SEND</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+</div>
+<div class="clouds">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud big front slowest">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant smaller">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud small slow">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant super-slow massive">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud slower">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+</div>
+
+
+</div>
+<script type="text/javascript">
+  function ValidateEmail(){
+  	var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+  	var x = document.getElementById("email-input");
+    if(x.value.match(regExp))
+	{
+		document.getElementById("inv-email").style.visibility = "hidden";
+		return true;
+	}
+	else
+	{
+		document.getElementById("inv-email").style.visibility = "visible";
+		return false;
+	}
+  }
+  function ValidatePhone(){
+  	pattern="" 
+  	var regExp = /^[0-9]{11}$/;
+  	var x = document.getElementById("input_p");
+    if(x.value.match(regExp))
+	{
+		document.getElementById("inv-phone").style.visibility = "hidden";
+		return true;
+	}
+	else
+	{
+		document.getElementById("inv-phone").style.visibility = "visible";
+		return false;
+	}
+  }
+</script>
+<script type="text/javascript">
+	let button = document.querySelector('#sentButton');
+	let text = document.querySelector('#sentText');
+	let icon = document.querySelector('#sentIcon');
+	if(icon.className.includes('send')){
+	  icon.classList.remove('send');
+	}
+	button.addEventListener('click', (e)=>{
+	var flag = chkB4Submit();
+	if (flag == true) {
+		e.stopPropagation(); 
+		if(icon.className.includes('send')){
+		    return;
+		}
+		icon.className += 'send';
+		setTimeout(()=>{
+		    text.innerText = 'SENDING';  
+		},1000);
+		  
+		setTimeout(()=>{
+		    text.innerText = 'SENT';  
+		}, 2500);
+		setTimeout(()=>{
+		    button.style.display = 'none';  
+		}, 4000);
+	}
+	});
+</script>
+<script type="text/javascript">
+	setTimeout(function(){
+        addShake();
+    }, 7000);
+	function addShake(){
+		var rhand = document.getElementById("air-plane-4-shake");
+	    rhand.classList.remove("f4PicZoom");
+	    rhand.className += " f4PicShake";
+	}
+	function rmvShake(){
+		var rhand = document.getElementById("air-plane-4-shake");
+	    rhand.classList.remove("f4PicShake");
+	}
+</script>
+<script type="text/javascript">
+	function chkB4Submit(){
+		var chkEmail = ValidateEmail();
+		var chkPhone = ValidatePhone();
+		var a1 = document.getElementById('radio11');
+	  	var a2 = document.getElementById('radio12');
+	  	var a3 = document.getElementById('radio13');
+	  	var a4 = document.getElementById('radio14');
+
+		var b1 = document.getElementById('radio21');
+	  	var b2 = document.getElementById('radio22');
+	  	var b3 = document.getElementById('radio23');
+	  	var b4 = document.getElementById('radio24');
+
+		var c1 = document.getElementById('radio31');
+	  	var c2 = document.getElementById('radio32');
+	  	var c3 = document.getElementById('radio33');
+	  	var c4 = document.getElementById('radio34');
+
+		var d1 = document.getElementById('radio41');
+	  	var d2 = document.getElementById('radio42');
+	  	var d3 = document.getElementById('radio43');
+	  	var d4 = document.getElementById('radio44');
+
+		var e1 = document.getElementById('radio51');
+	  	var e2 = document.getElementById('radio52');
+	  	var e3 = document.getElementById('radio53');
+	  	var e4 = document.getElementById('radio54');
+
+		var f1 = document.getElementById('radio61');
+	  	var f2 = document.getElementById('radio62');
+	  	var f3 = document.getElementById('radio63');
+	  	var f4 = document.getElementById('radio64');
+
+		var g1 = document.getElementById('radio71');
+	  	var g2 = document.getElementById('radio72');
+	  	var g3 = document.getElementById('radio73');
+	  	var g4 = document.getElementById('radio74');
+
+		var h1 = document.getElementById('radio81');
+	  	var h2 = document.getElementById('radio82');
+	  	var h3 = document.getElementById('radio83');
+	  	var h4 = document.getElementById('radio84');
+
+		var i1 = document.getElementById('radio91');
+	  	var i2 = document.getElementById('radio92');
+	  	var i3 = document.getElementById('radio93');
+	  	var i4 = document.getElementById('radio94');
+
+		var j1 = document.getElementById('radio101');
+	  	var j2 = document.getElementById('radio102');
+	  	var j3 = document.getElementById('radio103');
+	  	var j4 = document.getElementById('radio104');
+
+	  	var f = document.getElementById('input_fn');
+	  	var d = document.getElementById('input_d');
+	  	var e = document.getElementById('email-input');
+	  	var p = document.getElementById('input_p');
+	  	var a = document.getElementById('input_a');
+
+	  	if ((a1.checked == false ) && (a2.checked == false ) && (a3.checked == false ) && (a4.checked == false )) {
+		    var elmnt = document.getElementById("id_q1");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if ((b1.checked == false ) && (b2.checked == false ) && (b3.checked == false ) && (b4.checked == false )) {
+		    var elmnt = document.getElementById("id_q2");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if ((c1.checked == false ) && (c2.checked == false ) && (c3.checked == false ) && (c4.checked == false )) {
+		    var elmnt = document.getElementById("id_q3");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if ((d1.checked == false ) && (d2.checked == false ) && (d3.checked == false ) && (d4.checked == false )) {
+		    var elmnt = document.getElementById("id_q4");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if ((e1.checked == false ) && (e2.checked == false ) && (e3.checked == false ) && (e4.checked == false )) {
+		    var elmnt = document.getElementById("id_q5");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if ((f1.checked == false ) && (f2.checked == false ) && (f3.checked == false ) && (f4.checked == false )) {
+		    var elmnt = document.getElementById("id_q6");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if ((g1.checked == false ) && (g2.checked == false ) && (g3.checked == false ) && (g4.checked == false )) {
+		    var elmnt = document.getElementById("id_q7");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if ((h1.checked == false ) && (h2.checked == false ) && (h3.checked == false ) && (h4.checked == false )) {
+		    var elmnt = document.getElementById("id_q8");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if ((i1.checked == false ) && (i2.checked == false ) && (i3.checked == false ) && (i4.checked == false )) {
+		    var elmnt = document.getElementById("id_q9");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if ((j1.checked == false ) && (j2.checked == false ) && (j3.checked == false ) && (j4.checked == false )) {
+		    var elmnt = document.getElementById("id_q10");
+			elmnt.scrollIntoView();
+			elmnt.focus();
+			showMsg();
+		    return false;
+		}
+		if (f.value == "") {
+			f.scrollIntoView();
+			f.focus();
+			showMsg();
+		    return false;
+		}
+		if (d.value == "") {
+			d.scrollIntoView();
+			d.focus();
+			showMsg();
+		    return false;
+		}
+		if (e.value == "") {
+			e.scrollIntoView();
+			e.focus();
+			showMsg();
+		    return false;
+		}
+		if (p.value == "") {
+			p.scrollIntoView();
+			p.focus();
+			showMsg();
+		    return false;
+		}
+		if (a.value == "") {
+			a.scrollIntoView();
+			a.focus();
+			showMsg();
+		    return false;
+		}
+		if (chkEmail == false){
+			e.scrollIntoView();
+			e.focus();
+			showMsg();
+		    return false;
+		} 
+		if (chkPhone == false) {
+			p.scrollIntoView();
+			p.focus();
+			showMsg();
+		    return false;
+		}
+		else {
+			showSuccess();
+		    return true;
+		}
+	}
+	function showMsg(){
+		var rhand = document.getElementById("alert_plane");
+			rhand.style.display= "block";
+			rhand.classList.remove("fadeOutLeftBig");
+		    rhand.className += " fadeInRightBig";
+	    var rhand = document.getElementById("alert_plane_ok");
+			rhand.classList.remove("fadeOut");
+		    rhand.className += " fadeIn_ok";
+		autoHideMsg();
+	}
+	function rmvMsg(){
+	    var rhand = document.getElementById("alert_plane_ok");
+			rhand.classList.remove("fadeIn_ok");
+		    rhand.className += " fadeOut";
+		var rhand = document.getElementById("alert_plane");
+			rhand.classList.remove("fadeInRightBig");
+		    rhand.className += " fadeOutLeftBig";
+	}
+	function showPlaneSuc(){
+		var rhand = document.getElementById("success_plane");
+			rhand.style.display= "block";
+			rhand.classList.remove("fadeOutRightBig");
+		    rhand.className += " fadeInLeftBig";
+	    var rhand = document.getElementById("alert_plane_suc");
+			rhand.classList.remove("fadeOut");
+		    rhand.className += " fadeIn_ok";
+	}
+	function rmvSuc(){
+		var rhand = document.getElementById("alert_plane_suc");
+			rhand.classList.remove("fadeIn_ok");
+		    rhand.className += " fadeOut";
+		var rhand = document.getElementById("success_plane");
+			rhand.classList.remove("fadeInLeftBig");
+		    rhand.className += " fadeOutRightBig";
+	}
+	function showSuccess(){
+		showPlaneSuc();
+		var rhand = document.getElementById("firework_success");
+			rhand.style.display = "block";
+	}
+	function autoHideMsg(){
+		setTimeout(function(){
+		    rmvMsg();
+		}, 4000);
+	}
+</script>
+</body>
+</html>
