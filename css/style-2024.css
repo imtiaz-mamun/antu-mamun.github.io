@@ -48,6 +48,7 @@
 .card:hover .card__inner {
   background-color: #1abc9c;
   transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.48), 0 10px 10px rgba(0,0,0,0.44);
 }
 .card__inner {
   width: 100%;
@@ -107,6 +108,7 @@
 }
 .card.is-expanded .card__inner {
   background-color: #1abc9c;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.48), 0 10px 10px rgba(0,0,0,0.44);
 }
 .card.is-expanded .card__inner:after {
   content: "";
@@ -132,10 +134,10 @@
   overflow: visible;
   margin-top: 30px;
   opacity: 1;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.48), 0 10px 10px rgba(0,0,0,0.44);
 }
 .card.is-expanded:hover .card__inner {
   transform: scale(1);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.48), 0 10px 10px rgba(0,0,0,0.44);
 }
 .card.is-collapsing .card__inner:after {
   content: "";
