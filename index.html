@@ -846,6 +846,7 @@
 
         if ($cell.not($thisCell).hasClass("is-inactive")) {
           //do nothing
+          $thisCell.addClass("is-expanded").removeClass("is-collapsed");
         } else {
           $cell.not($thisCell).addClass("is-inactive");
         }
