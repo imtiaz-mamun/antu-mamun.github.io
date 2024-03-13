@@ -12,89 +12,167 @@
   justify-content: start;
 }
 
-.card {
-  align-items: flex-end;
-  background-size: cover;
-  border-radius: .75rem;
-/*	  border-radius: 2rem;*/
-  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+
+.dashboard-cards {
+  position: relative;
+  padding-bottom: 50px;
+  margin: 0 !important;
+}
+
+.dashboard-cards .card {
+  background: #ffffff;
+  display: inline-block;
+  perspective: 1000;
+  z-index: 20;
+  padding: 0 !important;
+  margin: 5px 5px 10px 5px;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  z-index: 1;
+  width: calc(33.33333333% - 10px);
   cursor: pointer;
-  display: flex;
-  margin: 0 0px;
-  overflow: hidden;
-  transition: .6s cubic-bezier(.28,-0.03,0,.99);
-  width: 100px;
-  background: #004858;
+  transition: all 0.3s ease;
 }
 
-.card > .row {
-  color: white;
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100%;
+.dashboard-cards .card:hover {
+  box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+  transition: all 0.3s ease;
 }
 
-.card > .row > .icon {
-  align-items: center;
-  background: #223;
-  border-radius: 0%;
-  color: white;
-  display: flex;
-  margin: 15px;
-  width: 15%;
-  padding-left: 10px;
+.dashboard-cards .card .card-title {
+  background: #ffffff;
+  padding: 20px 15px;
+  position: relative;
+  z-index: 0;
 }
 
-.card > .row > .description {
-  display: flex;
-  flex-direction: column;
-/*	  height: 80px;*/
-  justify-content: center;
-  opacity: 0;
-  overflow: hidden;
-  transform: translateY(30px);
-  transition: all .3s ease;
-  transition-delay: .3s;
-  width: 600px;
+.dashboard-cards .card .card-title h2 {
+  font-size: 24px;
+  letter-spacing: -0.05em;
+  margin: 0;
+  padding: 0;
 }
 
-.description p {
-  color: #b0b0ba;
-  padding-top: 5px;
+.dashboard-cards .card .card-title h2 small {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  letter-spacing: -0.025em;
 }
 
-.description h4 {
-  text-transform: uppercase;
-  color: #FFF;
-}
-input[type="radio"], input[type="checkbox"] {
-	display: none !important;
-	text-decoration: none !important;
-}
-input:checked + label {
-  width: 700px;
-  background: #164900;
+.dashboard-cards .card .card-description {
+  position: relative;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  padding: 10px 15px 0 15px;
 }
 
-input:checked + label .description {
+.dashboard-cards .card .card-actions {
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+  padding: 10px;
+  text-align: center;
+}
+
+.dashboard-cards .card .card-flap {
+  background: #d9d9d9;
+  position: absolute;
+  width: 100%;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+
+.dashboard-cards .card .flap1 {
+  transition: all 0.3s 0.3s ease-out;
+  z-index: -1;
+}
+
+.dashboard-cards .card .flap2 {
+  transition: all 0.3s 0s ease-out;
+  z-index: -2;
+}
+
+.dashboard-cards.showing .card {
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(0.88);
+}
+
+.dashboard-cards .no-touch .dashboard-cards.showing .card:hover {
+  opacity: 0.94;
+  transform: scale(0.92);
+}
+
+.dashboard-cards .card.d-card-show {
   opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-input[type="date"] {
-	line-height: 23px !important;
+  transform: scale(1) !important;
 }
 
-.card[for="income_card"] {
-/*	  background-image: url('https://hips.hearstapps.com/hmg-prod/images/first-day-of-winter-solstice-2021-1638278570.jpg?crop=0.8337777777777778xw:1xh;center,top&resize=1200:*');*/
+.dashboard-cards .card.d-card-show .card-flap {
+  background: #ffffff;
+  transform: rotateX(0deg);
 }
-.card[for="cost_card"] {
-/*	  background-image: url('https://hips.hearstapps.com/hmg-prod/images/first-day-of-winter-solstice-2021-1638278570.jpg?crop=0.8337777777777778xw:1xh;center,top&resize=1200:*');*/
+
+.dashboard-cards .card.d-card-show .flap1 {
+  transition: all 0.3s 0s ease-out;
 }
-.card[for="patient_card"] {
-/*	  background-image: url('https://hips.hearstapps.com/hmg-prod/images/first-day-of-winter-solstice-2021-1638278570.jpg?crop=0.8337777777777778xw:1xh;center,top&resize=1200:*');*/
+
+.dashboard-cards .card.d-card-show .flap2 {
+  transition: all 0.3s 0.2s ease-out;
 }
-.card[for="c4"] {
-/*	  background-image: url('https://hips.hearstapps.com/hmg-prod/images/first-day-of-winter-solstice-2021-1638278570.jpg?crop=0.8337777777777778xw:1xh;center,top&resize=1200:*');*/
+
+.dashboard-cards .card .task-count {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  background: #ecf0f1;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 100%;
+  color: #333333;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.dashboard-cards .task-list {
+  padding: 0 !important;
+}
+
+.dashboard-cards .task-list li {
+  padding: 10px 0;
+  padding-left: 10px;
+  margin: 3px 0;
+  list-style-type: none;
+  border-bottom: 1px solid #e9ebed;
+  border-left: 3px solid #f36525;
+  transition: all 0.2s ease;
+}
+
+.dashboard-cards .task-list li:hover {
+  background: #ecf0f1;
+  transition: all 0.2s ease;
+}
+
+.dashboard-cards .task-list li span {
+  float: right;
+  color: #f36525;
+  margin-right: 5px;
+}
+
+.dashboard-cards.showing .card.d-card-show .task-count {
+  color: #ffffff;
+  background: #f36525;
+  transition: all 0.2s ease;
+}
+
+.dashboard-cards .card-actions .btn {
+  color: #333;
+}
+
+.dashboard-cards .card-actions .btn:hover {
+  color: #f36525;
 }
 .hand-text {
 	font-size: 1.6em;
