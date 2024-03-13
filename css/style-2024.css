@@ -1,171 +1,42 @@
-.dashboard-cards {
-  position: relative;
-  padding-bottom: 50px;
-  margin: 0 !important;
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border: 1px solid #EEEEEE;
+  width: 500px;
+  overflow: auto;
 }
-
-.dashboard-cards .card {
-  background: #ffffff;
-  display: inline-block;
-  perspective: 1000;
-  z-index: 20;
-  padding: 0 !important;
-  margin: 5px 5px 10px 5px;
-  position: relative;
-  text-align: left;
-  transition: all 0.3s 0s ease-in;
-  z-index: 1;
-  width: calc(33.33333333% - 20px);
+.wrapper .item {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  border: 1px solid #34495e;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
-
-.dashboard-cards .card:hover {
-  box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
-  transition: all 0.3s ease;
+.wrapper .item .info {
+  background-color: #34495e;
+  color: white;
+  padding: 20px;
 }
-
-.dashboard-cards .card .card-title {
-  background: #ffffff;
-  padding: 20px 15px;
-  position: relative;
-  z-index: 0;
-}
-
-.dashboard-cards .card .card-title h2 {
-  font-size: 24px;
-  letter-spacing: -0.05em;
-  margin: 0;
+.wrapper .item .content {
+  height: 0;
   padding: 0;
-}
-
-.dashboard-cards .card .card-title h2 small {
-  display: block;
-  font-size: 14px;
-  margin-top: 8px;
-  letter-spacing: -0.025em;
-}
-
-.dashboard-cards .card .card-description {
-  position: relative;
-  font-size: 14px;
-  border-top: 1px solid #ddd;
-  padding: 10px 15px 0 15px;
-}
-
-.dashboard-cards .card .card-actions {
-  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
-  padding: 10px;
-  text-align: center;
-}
-
-.dashboard-cards .card .card-flap {
-  background: #d9d9d9;
-  position: absolute;
-  width: 100%;
-  transform-origin: top;
-  transform: rotateX(-90deg);
-}
-
-.dashboard-cards .card .flap1 {
-  transition: all 0.3s 0.3s ease-out;
-  z-index: -1;
-}
-
-.dashboard-cards .card .flap2 {
-  transition: all 0.3s 0s ease-out;
-  z-index: -2;
-}
-
-.dashboard-cards.showing .card {
-  cursor: pointer;
-  opacity: 0.6;
-  transform: scale(0.88);
-}
-
-.dashboard-cards .no-touch .dashboard-cards.showing .card:hover {
-  opacity: 0.94;
-  transform: scale(0.92);
-}
-
-.dashboard-cards .card.d-card-show {
-  opacity: 1 !important;
-  transform: scale(1) !important;
-}
-
-.dashboard-cards .card.d-card-show .card-flap {
-  background: #ffffff;
-  transform: rotateX(0deg);
-}
-
-.dashboard-cards .card.d-card-show .flap1 {
-  transition: all 0.3s 0s ease-out;
-}
-
-.dashboard-cards .card.d-card-show .flap2 {
-  transition: all 0.3s 0.2s ease-out;
-}
-
-.dashboard-cards .card .task-count {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 22px;
-  right: 10px;
-  background: #ecf0f1;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 100%;
-  color: #333333;
-  font-weight: 600;
+  background-color: white;
+  overflow-y: hidden;
   transition: all 0.2s ease;
 }
-
-.dashboard-cards .task-list {
-  padding: 0 !important;
+.wrapper .item.expanded .content {
+  padding: 20px;
+  height: 400px;
 }
-
-.dashboard-cards .task-list li {
-  padding: 10px 0;
-  padding-left: 10px;
-  margin: 3px 0;
-  list-style-type: none;
-  border-bottom: 1px solid #e9ebed;
-  border-left: 3px solid #f36525;
-  transition: all 0.2s ease;
+.wrapper .item.fly-top {
+  margin-top: -1000px;
 }
-
-.dashboard-cards .task-list li:hover {
-  background: #ecf0f1;
-  transition: all 0.2s ease;
-}
-
-.dashboard-cards .task-list li span {
-  float: right;
-  color: #f36525;
-  margin-right: 5px;
-}
-
-.dashboard-cards.showing .card.d-card-show .task-count {
-  color: #ffffff;
-  background: #f36525;
-  transition: all 0.2s ease;
-}
-
-.dashboard-cards .card-actions .btn {
-  color: #333;
-}
-
-.dashboard-cards .card-actions .btn:hover {
-  color: #f36525;
-}
-.hand-text {
-	font-size: 1.6em;
-	margin: 0px;
-}
-.hand-text span {
-	color: #00ff64 !important;
- 	font-size: 32px;  
-	text-shadow: rgb(24, 26, 27) 0px -2px 0px, rgba(0, 0, 0, 0.35) 0px 2px 4px, rgba(0, 0, 0, 0.15) 0px 3px 15px;
-		font-family: Arial, Helvetica, sans-serif;
+.wrapper .item.fly-bottom {
+  margin-bottom: -1000px;
 }
