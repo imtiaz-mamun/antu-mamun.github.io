@@ -831,37 +831,63 @@
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
   <script>
-    var $cell = $(".card");
+    var $cell = $('.card');
+    var x = document.getElementsByClassName(".card");
     //open and close card when clicked on card
-    $cell.find(".js-expander").click(function () {
-      var $thisCell = $(this).closest(".card");
+    $cell.find('.js-expander').click(function() {
 
-      if ($thisCell.hasClass("is-collapsed")) {
-        $cell
-          .not($thisCell)
-          .removeClass("is-expanded")
-          .addClass("is-collapsed")
-          .addClass("is-inactive");
-        $thisCell.removeClass("is-collapsed").addClass("is-expanded");
+      var $thisCell = $(this).closest('.card');
+      
+      if ($thisCell.hasClass('is-collapsed')) {
+        
+        //$cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
+        
+        //$cell.removeClass('is-expanded')
+        $thisCell.removeClass('is-collapsed');
+        $thisCell.addClass('is-expanding');
+        
+        $cell.not($thisCell).removeClass('is-expanded');
+          $cell.not($thisCell).addClass('is-collapsing');
+        
+        setTimeout(function(){ 
+          
+          $thisCell.removeClass('is-expanding');
+        $thisCell.addClass('is-expanded');
+        
+        $cell.not($thisCell).removeClass('is-collapsing');
+          $cell.not($thisCell).addClass('is-collapsed');
+         
+         }, 150);
 
-        if ($cell.not($thisCell).hasClass("is-inactive")) {
+        // setTimeout(function(){ 
+          
+        //   //$cell.not($thisCell).removeClass('is-expanded')
+        //   //$cell.not($thisCell).addClass('is-collapsed');                   
+        //  }, 150);
+        
+        
+        if ($cell.not($thisCell).hasClass('is-inactive')) {
           //do nothing
-          $thisCell.addClass("is-expanded").removeClass("is-collapsed");
         } else {
-          $cell.not($thisCell).addClass("is-inactive");
+          //$cell.not($thisCell).addClass('is-inactive');
         }
+
       } else {
-        $thisCell.removeClass("is-expanded").addClass("is-collapsed");
-        $cell.not($thisCell).removeClass("is-inactive");
+        //$thisCell.removeClass('is-expanded').addClass('is-collapsed'); 
+        $cell.removeClass('is-expanded').addClass('is-collapsed');
+        $cell.not($thisCell).removeClass('is-inactive');
       }
     });
 
     //close card when click on cross
-    $cell.find(".js-collapser").click(function () {
-      var $thisCell = $(this).closest(".card");
+    $cell.find('.js-collapser').click(function() {
 
-      $thisCell.removeClass("is-expanded").addClass("is-collapsed");
-      $cell.not($thisCell).removeClass("is-inactive");
+      var $thisCell = $(this).closest('.card');
+
+      //$thisCell.removeClass('is-expanded').addClass('is-collapsed');
+      //$x.removeClass('is-expanded').addClass('is-collapsed');
+      $cell.not($thisCell).removeClass('is-inactive');
+
     });
 
 
