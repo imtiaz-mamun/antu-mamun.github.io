@@ -292,7 +292,6 @@ svg {
   box-shadow:-1px 0px 10px 0px rgba(50, 50, 50, 0.86);*/
   font-family: 'Open Sans', sans-serif;
   color: #fff;
-  margin: 0px 150px;
   /*color: #ee334b;*/
   color: #d0e5ff;
   /*top: 40%;*/
@@ -1119,8 +1118,6 @@ h3:focus {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px
 }
 .f2Pic_mob{
   display: none;
