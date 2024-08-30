@@ -1181,7 +1181,7 @@ h3:focus {
 }
 @media screen and (max-width:500px){
   #quiz-info-form{
-    margin: 10px 10px;
+    margin: 10px 0px;
   }
   .options{
     margin-left: 20px !important;
