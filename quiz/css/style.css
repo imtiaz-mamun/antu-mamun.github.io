@@ -1651,3 +1651,65 @@ h3:focus {
     margin-bottom: 20px; 
   }
 }
+
+
+element {
+}
+.text-input input[type="text"] {
+  display: inline-block;
+
+  width: 700px;
+
+  height: 40px;
+
+  box-sizing: border-box;
+
+  outline: none;
+
+  border: 1px solid lightgray;
+
+  border-radius: 4px;
+
+  padding: 10px 10px 10px 155px;
+
+  transition: all 0.1s ease-out;
+
+  font-size: 13px;
+
+}
+* {
+  position: relative;
+
+}
+#quizForm {
+  font-family: 'Open Sans', sans-serif;
+
+  color: #fff;
+
+  color: #ee334b;
+
+  color: #d0e5ff;
+
+}
+@media screen and (max-width: 900px) and (min-width: 501px) {
+  .f2Pic {
+	height: 200px;
+	left: 0px;
+	}
+
+	.f1Pic {
+	width: 368px;
+	}
+	.f3Pic {
+	width: 200px;
+	left: 710px;
+	}
+	.f4Pic {
+	width: 270px;
+	bottom: 363px;
+	left: 674px;
+	}
+	.bannerBG {
+	width: auto;
+	}
+}
