@@ -1384,7 +1384,7 @@ h3:focus {
   .f2Pic_mob{
     display: block !important;
     bottom: 615px;
-    left: -165px;
+    left: -145px;
     animation: leftTOright 2.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) !important;
     animation-fill-mode: none;
     animation-fill-mode: forwards;
