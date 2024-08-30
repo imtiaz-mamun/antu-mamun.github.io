@@ -1715,5 +1715,8 @@ element {
 	.questions div {
   	margin: 0px 0px;
 	}
+	#quizForm h1 {
+  	font-size: 32px;
+	}
 
 }
