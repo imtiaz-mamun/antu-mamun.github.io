@@ -1712,4 +1712,8 @@ element {
 	.bannerBG {
 	width: auto;
 	}
+	.questions div {
+  	margin: 0px 0px;
+	}
+
 }
